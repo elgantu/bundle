@@ -58,6 +58,7 @@
                         });
 
                         startStopButton.setAttribute('data-play', false);
+                        startStopButton.style.display = "block";
                     }
                 });
             } else {
@@ -65,13 +66,23 @@
             }
         }
     }
-
-    // const attentionElement = document.getElementById('attentionIndex__preview')
-    // const faces = document.getElementById('faces__preview')
-    // const active_faces = document.getElementById('activeFaces__preview')
-    // const player = document.getElementById('test_player');
-
+    if(document.getElementById('test_player2')){
     initialApp.streamFromWebcam()
+        const player = document.getElementById('test_player2')
+        const startStopButton = document.getElementById('play__stop__button');
+        player.addEventListener("pause", (event) => {
+            startStopButton.style.display = "block";
+        });
+    }
+
+    // if(document.getElementById('test_player22')){
+    //     const canvas = document.getElementById('abc22')
+    //     const attentionElement = document.getElementById('attentionIndex__preview')
+    //     const facesElement = document.getElementById('faces__preview')
+    //     const active_facesElement = document.getElementById('activeFaces__preview')
+    //     const player = document.getElementById('test_player22');
+    //     initialApp.startVideo(player, canvas)
+    // }
 
     // var intersectionObserver = new IntersectionObserver(function(entries) {
     //     // Если intersectionRatio равен 0, цель вне зоны видимости
