@@ -39,7 +39,7 @@
                             video.srcObject = stream;
                             mediaStream = stream;
 
-//                             video.play();
+                            video.play();
 
                             startStopButton.setAttribute('data-play', true);
                             initialApp.startVideo(document.getElementById('webcam'), document.getElementById('abc2'), attentionElement, faces, active_faces)
