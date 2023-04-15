@@ -35,7 +35,7 @@
                 startStopButton.addEventListener('click', function () {
                     if (startStopButton.getAttribute('data-play') == "false") {
                         navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
-                            player.play()
+//                             player.play()
                             video.srcObject = stream;
                             mediaStream = stream;
 
